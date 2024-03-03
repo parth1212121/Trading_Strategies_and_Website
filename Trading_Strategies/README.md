@@ -88,17 +88,8 @@ To execute a specific trading strategy, run the compiled program with appropriat
  start_date=<start_date> end_date=<end_date>
   ```
 
-
-
 **Each strategy generates CSV files containing daily cash flow, order statistics, and a final P&L report.
 Below is the discription of all trading startegeies , It contains details about its implementation, insights and results.**
-
-
-
-**Each strategy generates CSV files containing daily cash flow, order statistics, and a final P&L report.
-Below is the discription of all trading startegeies , It contains details about its implementation, insights and results.**
-
-
 
 # Trading Strategy: BASIC
 
