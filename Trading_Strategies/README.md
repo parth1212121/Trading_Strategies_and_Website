@@ -39,49 +39,59 @@ Before running the program, ensure you have the following installed:
 
 To execute a specific trading strategy, run the compiled program with appropriate command-line arguments:
 
-  ```bash
-     ./trading_strategy <strategy> <symbol> [additional parameters]
-   ```
-
-
 ### ADX
   ```bash
-      ./trading_strategy ADX <symbol> <n> <x> <adx_threshold> <start_date> <end_date>
+   make strategy=ADX symbol=<symbol> x=<x> n=<n> adx_threshold=<adx_threshold> start_date=<start_date> end_date=<end_date>
   ```
 
 ### BASIC
   ```bash
-./trading_strategy BASIC <symbol> <n> <x> <start_date> <end_date>
+   make strategy=BASIC symbol=<symbol> n=<n> x=<x> start_date=<start_date> end_date=<end_date>
   ```
 
 ### DMA
   ```bash
-  ./trading_strategy DMA <symbol> <n> <x> <p> <start_date> <end_date>
+   make strategy=DMA symbol=<symbol> n=<n> x=<x> p=<p> start_date=<start_date> end_date=<end_date>
   ```
 
 ### DMA++
   ```bash
-  ./trading_strategy DMA++ <symbol> <n> <x> <p> <max_hold_days> <c1> <c2> <start_date> <end_date>
+   make strategy="DMA++" symbol=<symbol> x=<x> p=<p> n=<n> max_hold_days=<max_hold_days> c1=<c1> c2=<c2>
+ start_date=<start_date> end_date=<end_date>
   ```
 
 ### LinearRegression
   ```bash
-  ./trading_strategy LinearRegression <symbol> <x> <p> <train_start_date> <train_end_date> <start_date> <end_date>
+   make strategy="LINEAR_REGRESSION" symbol=<symbol> x=<x> p=<p> train_start_date=<train_start_date>
+ train_end_date=<train_end_date> start_date=<start_date> end_date=<end_date>
   ```
+
 ### MACD
   ```bash
-  ./trading_strategy MACD <symbol> <x> <start_date> <end_date>
+  make strategy=MACD symbol=<symbol> x=<x> start_date=<start_date> end_date=<end_date>
   ```
 
 ### RSI
   ```bash
-  ./trading_strategy RSI <symbol> <n> <x> <oversold_threshold> <overbought_threshold> <start_date> <end_date>
+    make strategy=RSI symbol=<symbol> x=<x> n=<n> oversold_threshold=<oversold_threshold> overbought_threshold=<overbought_threshold>
+ start_date=<start_date> end_date=<end_date>
+  ```
+
+### BEST OF ALL
+  ```bash
+    make strategy="BEST_OF_ALL" symbol=<symbol> start_date=<start_date> end_date=<end_date>
   ```
 
 ### PAIRS
   ```bash
-  ./trading_strategy PAIRS <symbol1> <symbol2> <n> <x> <start_date> <end_date> <threshold> <stop_loss_threshold>
+   make strategy=PAIRS symbol1=<symbol1> symbol2=<symbol2> x=<x> n=<n> threshold=<threshold>
+ start_date=<start_date> end_date=<end_date>
   ```
+
+
+
+**Each strategy generates CSV files containing daily cash flow, order statistics, and a final P&L report.
+Below is the discription of all trading startegeies , It contains details about its implementation, insights and results.**
 
 
 
