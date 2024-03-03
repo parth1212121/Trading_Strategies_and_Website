@@ -158,7 +158,7 @@ The ADX (Average Directional Index) trading strategy is an algorithmic approach 
 - **Visual Analysis**: Graphical representations of daily cash flow and order statistics can provide visual insights into the strategy's execution and profitability.
 
 
-![ADX](ADX.png)
+![ADX](./pictures/ADX.png)
 
 
 # Trading Strategy: DMA
@@ -194,7 +194,7 @@ The DMA (Daily Moving Average) trading strategy is an algorithmic approach imple
 - **Visual Analysis**: Graphical representations of daily cash flow and order statistics can provide visual insights into the strategy's execution and profitability.
 
 
-![ADX](DMA.png)
+![ADX](./pictures/DMA.png)
 
 
 # Trading Strategy: DMA++
@@ -236,7 +236,7 @@ The DMA++ (Dynamic Moving Average Plus Plus) trading strategy is an advanced alg
 - **Risk Management**: Effective risk management techniques, such as position sizing and stop-loss orders, are essential for managing downside risk and enhancing overall strategy performance.
 
 
-![ADX](DMA++.png)
+![ADX](./pictures/DMA++.png)
 
 
 
@@ -273,7 +273,7 @@ The MACD (Moving Average Convergence Divergence) trading strategy is an algorith
 - **Visual Analysis**: Graphical representations of daily cash flow and order statistics can provide visual insights into the strategy's execution and profitability.
 
 
-![ADX](MACD.png)
+![ADX](./pictures/MACD.png)
 
 
 
@@ -311,7 +311,7 @@ The RSI (Relative Strength Index) trading strategy is a momentum oscillator that
 - **Risk Management**: Implementing risk management techniques, such as position sizing and stop-loss orders, is crucial for managing downside risk and maximizing profitability.
 
 
-![ADX](RSI.png)
+![ADX](./pictures/RSI.png)
 
 
 
@@ -354,7 +354,7 @@ The Linear Regression trading strategy employs machine learning techniques to pr
 
 
 
-![ADX](LR.png)
+![ADX](./pictures/LR.png)
 
 # Multithreading  "Best of All" Strategy Evaluation
 
@@ -385,7 +385,7 @@ This implementation evaluates the performance of multiple trading strategies con
 - **Error Handling**: Robust error handling mechanisms are necessary to ensure proper synchronization and avoid race conditions during multithreaded execution.
 
 
-![ADX](BEST_OF_ALL.png)
+![ADX](./pictures/BEST_OF_ALL.png)
 
 
 #  Pairs Trading
