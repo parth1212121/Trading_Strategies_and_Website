@@ -9,7 +9,6 @@ from jugaad_data.nse import stock_df
 import numpy as np
 from flask import Flask, request,render_template, redirect, jsonify
 import random
-import finnhub
 
 from filters import (
     Volume_Filter,
@@ -19,7 +18,6 @@ from filters import (
     Average_Price_filter
 )
 from utils import (
-    news_list,
     retrieve_stock_data,
     TRENDING_HIGH,
     news,
