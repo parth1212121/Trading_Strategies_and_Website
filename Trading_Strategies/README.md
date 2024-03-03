@@ -121,7 +121,7 @@ The performance of the BASIC trading strategy can be evaluated by analyzing the 
 #### Visual Analysis
 Graphical representations of daily cash flow and order statistics offer valuable insights into the execution and profitability of the BASIC trading strategy. These visualizations can help identify trends, patterns, and potential areas for optimization in the trading strategy.
 
-![Basic](BASIC.png)
+![Basic](./pictures/BASIC.png)
 
 
 # Trading Strategy: ADX
