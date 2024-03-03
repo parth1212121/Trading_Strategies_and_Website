@@ -27,5 +27,5 @@ This repository contains implementations of a Basic Trading Website .
 **Now, Copy the https link appeared on the terminal to your favourite browser and run it. THis should take you to the Login Page of thge Website.**
 
 
-**For details regarding website working and design , users can refer to the "Report" given in the folder.**
+**For details regarding website working and design , users can refer to the User GUide presented here [Link to User_Guide](User_Guide.pdf)**
 
