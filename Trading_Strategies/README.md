@@ -31,7 +31,7 @@ Before running the program, ensure you have the following installed:
 
 To execute a specific trading strategy, run the compiled program with appropriate command-line arguments:
 
-**Sample Command --> make strategy=BASIC symbol=SBIN n=2 x=2 start_date=01/01/2022 end_date=01/01/2023**
+**Sample Command --> "make strategy=BASIC symbol=SBIN n=2 x=2 start_date=01/01/2022 end_date=01/01/2023"**
 
 ### ADX
   ```bash
