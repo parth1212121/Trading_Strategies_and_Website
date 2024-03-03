@@ -16,28 +16,22 @@ Before running the program, ensure you have the following installed:
 1. Clone the repository:
 
     ```bash
-     git clone https://github.com/your_username/trading-strategies.git
+     git clone https://github.com/your_username/UCL_Project.git
 
 2. Navigate to the project directory:
     ```bash
-     cd trading-strategies
+     cd UCL_Project
 
-3. Compile the source code::
+3. Navigate to the project sub_directory:
     ```bash
-     g++ -o trading_strategy main.cpp -lpthread
+     cd Trading_Strategies
 
-
-2. Navigate to the project directory:
-    ```bash
-     g++ -o trading_strategy main.cpp -lpthread
-
-4. Compile the source code
-    ```bash
-     g++ -o trading_strategy main.cpp -lpthread
 
 ### Running The Program
 
 To execute a specific trading strategy, run the compiled program with appropriate command-line arguments:
+
+**Sample Command --> make strategy=BASIC symbol=SBIN n=2 x=2 start_date=01/01/2022 end_date=01/01/2023**
 
 ### ADX
   ```bash
