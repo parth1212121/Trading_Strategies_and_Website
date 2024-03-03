@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table, th, td {
+        
+        border-collapse: collapse;
+        padding:8px;
+      }
+
+      
+      </style>
+    <title>FILTER</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='filter_screen.css') }}">
+  </head>
+  <body>
+    <div class="element">
+      <div class="div">
+
+        <div id="back_to_compare">
+            <a href="/compare" id="compare">
+                Back to Compare
+            </a> 
+        </div>
+
+
+  <!--- EDITED-->
+
+    <div class="form-container">
+        
+        <form action="/filter" method='post'>
+            <div class="form-group">
+                <input type="hidden" name="action" value="compute_volume">
+                <input id ="volume_threshold" type="text" name="volume_threshold_name" placeholder="Volume Threshold" required>
+            </div>
+            <div class="form-group">
+                <button id="APPLY_VOLUME_FILTER" type="submit">Volume Filter</button>
+            </div>
+            
+        </form>
+    </div>
+    <br><br>
+    <div class="form-container">
+      
+      <form action="/filter" method='post'>
+          <div class="form-group">
+              <input type="hidden" name="action" value="compute_price">
+              <input id ="price_threshold" type="text" name="price_threshold_name" placeholder="Price Threshold" required>
+          </div>
+          <div class="form-group">
+              <button id="APPLY_PRICE_FILTER" type="submit">Price Filter</button>
+          </div>
+        </form>
+      </div>
+      <br><br>
+      <div class="form-container">
+        
+        <form action="/filter" method='post'>
+            <div class="form-group">
+                <input type="hidden" name="action" value="compute_range_52W">
+                <input id ="range_52W_minimum" type="text" name="range_52W_minimum_name" placeholder="Range 52W Minimum" required><t>
+                <input id ="range_52W_maximum" type="text" name="range_52W_maximum_name" placeholder="Range 52W Maximum" required>            
+              </div>
+            <div class="form-group">
+                <button id="APPLY_Range_52W_FILTER" type="submit">Range 52W Filter</button>
+            </div>  
+          </form>
+        </div>  
+      <br><br>
+      <div class="form-container">
+        <form action="/filter" method='post'>
+            <div class="form-group">
+                <input type="hidden" name="action" value="compute_Value">
+                <input id ="Value_threshold" type="text" name="Value_threshold_name" placeholder="Value Threshold" required>
+            </div>
+            <div class="form-group">
+                <button id="APPLY_VALUE_FILTER" type="submit">Value Filter</button>
+            </div>
+          </form>
+        </div>
+      <br><br>
+      <div class="form-container">
+        <form action="/filter" method='post'>
+            <div class="form-group">
+                <input type="hidden" name="action" value="compute_Average_Price">
+                <input id ="Average_Price_threshold" type="text" name="Average_Price_threshold_name" placeholder="Average Price Threshold" required>
+            </div>
+            <div class="form-group">
+                <button id="APPLY_Average_Price_FILTER" type="submit">Average Price Filter</button>
+            </div>         
+      </form>
+  </div>
+            
+            <!--Insert all tthe buttons and the respective input here-->
+        
+        
+        <!--- EDITED-->
+        <div id="heading">
+          {{HEDAING|safe}}
+          
+        </div>
+        <div class="scrollmenu">
+          {{filter_data|safe}}
+        </div>
+        
+
+
+        <img class="vector" src="{{ url_for('static', filename='img/watermarklogo.png') }}" />
+        <div class="NAV-BAR">
+
+            
+         
+          <img class="profile_image" src="{{ url_for('static', filename='img/profile.png') }}"  />
+            <div class="dropdown">
+
+              <button id="profile_button">
+              </button>
+              <div class="dropdown-content">
+              <a href="/profile">View Profile</a>
+              <a href="/logout">Logout</a>
+              </div>
+            </div>
+            
+            
+
+            <a href="/home">
+            <img class="logo_image" src="{{ url_for('static', filename='img/logo.png') }}" />
+            </a>
+            
+            <a href="/stocks">
+            <img class="vector-2" src="{{ url_for('static', filename='img/stock.png') }}" />
+            </a>
+
+            <a href="/compare">
+            <img class="vector-3" src="{{ url_for('static', filename='img/compare.png') }}" />
+            </a>
+
+          </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

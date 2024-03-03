@@ -1,0 +1,162 @@
+/* style.css */
+body {
+    overflow: hidden;
+    background-color: #191919;
+
+}
+
+.RECTANGLE{
+    position: absolute;
+    top:0px;
+    left:0px;
+    height:100%;
+    width: 53%;
+    background-color: #CA9849;
+    background: linear-gradient(to right, #CA9849, #191919);
+
+}
+.logowatermark_image {
+    position: absolute;
+    width: 996px;
+    height:  500px;
+    bottom: 0px;
+    left: 0px;
+}
+#sign_in_header{
+    position :absolute;
+    color: #D4D4D4;
+    top:34%;
+    left:62%;
+    height:50px;
+    width:500px;
+    border:1px;
+    text-align: center;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+.logo_image{
+    position: absolute;
+    width: 90px;
+    height:  79px;
+    top : 23%;
+    left: 76.6%;
+}
+
+
+
+.login-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+#USER{
+    position: absolute;
+    top: 50%;
+    left: 66%;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    background-color: #1F1F1F;
+    color: #d2d2d2;
+    font-size: 32px;
+    border: none;
+    border-radius: 10px;
+}
+
+#PASSWORD{
+    position: absolute;
+    top: 60%;
+    left: 66%;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    background-color: #1F1F1F;
+    color: #d2d2d2;
+    font-size: 32px;
+    border: none;
+    border-radius: 10px;
+    
+}
+
+#SUBMIT{
+    position: absolute;
+    top:75%;
+    left :72%;
+    width: 200px;
+    height:60px;
+    padding: 10px;
+    border: none;
+    background-color: #CA9849;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #d2d2d2;
+    font-size: 32px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+
+
+}
+#new_account{
+    position: absolute;
+    top:66%;
+    left: 71.5%;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #d2d2d2;
+    font-size: 12px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+
+
+
+    /* Add this to your existing style.css */
+
+.welcome-container {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: auto;
+}
+
+.welcome-container h1 {
+    margin-bottom: 20px;
+}
+
+.logout-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
+
+

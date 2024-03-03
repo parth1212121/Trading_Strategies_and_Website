@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login_screen.css') }}">
+</head>
+<body>
+    <div class="RECTANGLE"> 
+        <img class="logowatermark_image" src="{{ url_for('static', filename='img/loginphoto.png') }} " >
+    </div>
+    <div class="logo_icon">
+        <img class="logo_image" src="{{ url_for('static', filename='img/loginicon.png') }}">
+    </div>
+    <p id="sign_in_header">
+        Sign In to your Account
+    </p>
+    <div class="form-container">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <div class="form-group">
+                <input id ="USER"type="text" name="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <input id="PASSWORD" type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <button id="SUBMIT" type="submit">Sign In</button>
+            </div>
+            
+        </form>
+        <p id="new_Account">Don't have an account? <a href="/register">Register here</a></p>
+    </div>
+</body>
+</html>
+
+
+

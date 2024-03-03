@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table, th, td {
+        
+        border-collapse: collapse;
+        padding:8px;
+      }
+
+      
+      </style>
+    <title>HOME</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home_screen.css') }}">
+  </head>
+  <body>
+    <div class="element">
+      <div class="div">
+        <div class="text-wrapper">
+          Trending Data
+        </div>
+
+        
+        <p class="p">
+          <table id="Trending_data">
+            {{TrendingData|safe}}
+          </table>
+          
+        </p>
+        <div>
+          <p id="Trendingnews">Trending News </p>
+          <table id="news">
+            
+            {{NEWS|safe}}
+          </table>
+        </div>
+
+        <img class="vector" src="{{ url_for('static', filename='img/watermarklogo.png') }}" />
+        <div class="NAV-BAR">
+
+            
+         
+          <img class="profile_image" src="{{ url_for('static', filename='img/profile.png') }}"  />
+            <div class="dropdown">
+
+              <button id="profile_button">
+              </button>
+              <div class="dropdown-content">
+              <a href="/profile">View Profile</a>
+              <a href="/logout">Logout</a>
+              </div>
+            </div>
+            
+            
+
+            <a href="/home">
+            <img class="logo_image" src="{{ url_for('static', filename='img/logo.png') }}" />
+            </a>
+            
+            <a href="/stocks">
+            <img class="vector-2" src="{{ url_for('static', filename='img/stock.png') }}" />
+            </a>
+
+            <a href="/compare">
+            <img class="vector-3" src="{{ url_for('static', filename='img/compare.png') }}" />
+            </a>
+
+          </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

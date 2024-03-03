@@ -1,0 +1,641 @@
+body {
+    overflow-x: hidden;
+    background-color: #191919;
+    display:flex;
+}
+
+.div {
+    overflow: hidden;
+    background-color: #191919;
+    width: 1440px;
+    height: 1000px;
+    left :0px;
+    position: absolute;
+    display :flex;
+  }
+  
+.text-wrapper {
+    position: absolute;
+    top: 70px;
+    left: 90px;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #d4d4d4;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+  
+.p {
+    position: absolute;
+    top: 121px;
+    left: 90px;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+#Trending_data{
+    position: absolute;
+    top: 121px;
+    left: 90px;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    background: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+
+
+
+}
+  
+.vector {
+    
+    position: absolute;
+    width: 996px;
+    height: 770px;
+    top: 338px;
+    left: 484px;
+}
+
+.NAV-BAR {
+    width: 100%;
+    height: 100px;
+    top: 0px;
+    position: fixed;
+ 
+    width: 1442px;
+    height: 52px;
+    top: -2px;
+    left: -2px;
+    background-color: #1f1f1f;
+    border: 2px solid;
+    border-color: #ffffff05;
+}
+  
+.logo_image {
+    position: absolute;
+    width: 40px;
+    height: 34px;
+    top: 10px;
+    left: 90px;
+}
+  
+.profile_image {
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    top: 12px;
+    left: 1323px;
+}
+  
+.vector-2 {
+    position: absolute;
+    width: 26px;
+    height: 24px;
+    top: 12px;
+    left: 1262px;
+}
+  
+.vector-3 {
+    position: absolute;
+    width: 25px;
+    height: 22px;
+    top: 12px;
+    left: 1200px;
+  }
+  
+
+#profile_button{
+    background: transparent;
+    border: none;
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    top: 12px;
+    left: 1323px;
+}
+
+.dropdown {
+    display: inline-block;
+    position: absolute;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    
+    
+    top: 40px;
+    left: 1243px;
+    width: 107px;
+    
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a {
+    
+    
+    display: block;
+    color: #1f1f1f;
+    background-color: #CA9849;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+.dropdown-content a:hover {
+    color: #CA9849;
+    background-color: #1F1F1F;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+#back_to_compare{
+    position: absolute;
+      top: 55px;
+      right: 90px;
+  }
+  
+  #compare{
+    display: block;
+    color: #d4d4d4;
+    background-color: #CA9849;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+  
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+  }
+  #compare:hover{
+    display: block;
+    color: #CA9849;
+    background-color: #1F1F1F;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+  
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+  }
+
+
+#table{
+    position:absolute;
+    top:18%;
+    left:50%;
+    border:1px solid white;
+
+    display: block;
+    color: #CA9849;
+    background-color: #1F1F1F;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+  
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+
+}
+div.scrollmenu {
+    background-color: #333;
+    height:auto;
+    max-height: 500px;
+    overflow-y: auto;
+    white-space: nowrap;
+    position:absolute;
+    top:18%;
+    left:50%;
+    border:1px solid white;
+    width:auto;
+    display: block;
+    color: #CA9849;
+    background-color: #1F1F1F;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+  
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+}
+
+div.scrollmenu a {
+display: inline-block;
+color: white;
+padding: 14px;
+text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+background-color: #777;
+}
+
+#APPLY_VOLUME_FILTER{
+    position:absolute;
+    top:110px;
+    left:90px;
+    border:none;
+    border-radius: 10px;
+    width:200px;
+
+    display: block;
+    color: #d4d4d4;
+    background-color: #CA9849;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+  
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+}
+#APPLY_VOLUME_FILTER:hover{
+    position:absolute;
+    top:110px;
+    left:90px;
+    border:none;
+    border-radius: 10px;
+    width:200px;
+    display: block;
+    color: #CA9849;
+    background-color: #1F1F1F;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+  
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+}
+#volume_threshold{
+    position:absolute;
+    top:110px;
+    left:300px;
+    border:none;
+    border-radius: 10px;
+    width:250px;
+    display: block;
+    color: #CA9849;
+    background-color: #1F1F1F;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+  
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+}
+#APPLY_PRICE_FILTER{
+    position:absolute;
+    top:210px;
+    left:90px;
+    border:none;
+    border-radius: 10px;
+    width:200px;
+    display: block;
+    color: #d4d4d4;
+    background-color: #CA9849;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+  
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+}
+#APPLY_PRICE_FILTER:hover{
+    position:absolute;
+    top:210px;
+    left:90px;
+    border:none;
+    border-radius: 10px;
+    width:200px;
+    display: block;
+    color: #CA9849;
+    background-color: #1F1F1F;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+  
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+}
+#price_threshold{
+    position:absolute;
+    top:210px;
+    left:300px;
+    border:none;
+    border-radius: 10px;
+    width:250px;
+    display: block;
+    color: #CA9849;
+    background-color: #1F1F1F;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+  
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+}
+#APPLY_Range_52W_FILTER{
+    position:absolute;
+    top:510px;
+    left:90px;
+    border:none;
+    border-radius: 10px;
+    width:200px;
+    display: block;
+    color: #d4d4d4;
+    background-color: #CA9849;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+  
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+}
+#APPLY_Range_52W_FILTER:hover{
+    position:absolute;
+    top:510px;
+    left:90px;
+    border:none;
+    border-radius: 10px;
+    width:200px;
+    display: block;
+    color: #CA9849;
+    background-color: #1F1F1F;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    width:200px;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+}
+#range_52W_minimum{
+    position:absolute;
+    top:510px;
+    left:300px;
+    border:none;
+    border-radius: 10px;
+    width:250px;
+    display: block;
+    color: #CA9849;
+    background-color: #1F1F1F;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    width:200px;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+}
+#range_52W_maximum{
+    position:absolute;
+    top:550px;
+    left:300px;
+    border:none;
+    border-radius: 10px;
+    width: 250px;
+    display: block;
+    color: #CA9849;
+    background-color: #1F1F1F;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    width:200px;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+}
+#APPLY_VALUE_FILTER{
+    position:absolute;
+    top:410px;
+    left:90px;
+    border:none;
+    border-radius: 10px;
+    width:200px;
+    display: block;
+    color: #d4d4d4;
+    background-color: #CA9849;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+  
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+}
+#APPLY_VALUE_FILTER:hover{
+    position:absolute;
+    top:410px;
+    left:90px;
+    border:none;
+    border-radius: 10px;
+    width:200px;
+    display: block;
+    color: #CA9849;
+    background-color: #1F1F1F;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+  
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+}
+#Value_threshold{
+    position:absolute;
+    top:410px;
+    left:300px;
+    border:none;
+    border-radius: 10px;
+    width:250px;
+    display: block;
+    color: #CA9849;
+    background-color: #1F1F1F;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+  
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+}
+#APPLY_Average_Price_FILTER{
+    position:absolute;
+    top:310px;
+    left:90px;
+    border:none;
+    border-radius: 10px;
+    width:200px;
+    display: block;
+    color: #d4d4d4;
+    background-color: #CA9849;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+  
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+}
+#APPLY_Average_Price_FILTER:hover{
+    position:absolute;
+    top:310px;
+    left:90px;
+    border:none;
+    border-radius: 10px;
+    width:200px;
+    display: block;
+    color: #CA9849;
+    background-color: #1F1F1F;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+  
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+}
+#Average_Price_threshold{
+    position:absolute;
+    top:310px;
+    left:300px;
+    border:none;
+    border-radius: 10px;
+    width:250px;
+    display: block;
+    color: #CA9849;
+    background-color: #1F1F1F;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+  
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius:10px;
+    border:none;
+}
+
+#heading{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    width:300px;
+
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #d4d4d4;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    text-align: center;
+}

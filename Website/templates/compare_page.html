@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js" >
+  </script>
+  <head>
+    <title>STOCKS</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="{{ url_for('static', filename='compare.js') }}"></script>
+   
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='compare_screen.css') }}">
+    
+  </head>
+  <body>
+    <p id="names_with_commas">
+      {{python_list}}
+    </p>
+    
+    <div class="element">
+      <div class="div">
+        <div class="text-wrapper">
+          Compare Stocks
+        </div>
+        
+        <img class="vector" src="{{ url_for('static', filename='img/watermarklogo.png') }}" />
+        
+
+      
+            <button for="stock_name" id="text1" onClick="add_stock_name()">Add Stock Name: </button>
+            <div id="filter_page"><a id="filters" href="/filter">Open Filters</a></div>
+            <input type="text" id='stock_name' name="stock_name" placeholder="STOCK NAME" required><br>
+            <div id="show_names"></div>
+            <button type="button"  class="column_name" id="OPEN" onclick="setcolumn('OPEN')" >OPEN</button>
+            <button type="button"  class="column_name" id="HIGH" onclick="setcolumn('HIGH')" >HIGH</button>
+            <button type="button"  class="column_name" id="LOW" onclick="setcolumn('LOW')" >LOW</button>
+            <button type="button"  class="column_name" id="LTP" onclick="setcolumn('LTP')" >LTP</button>
+            <button type="button"  class="column_name" id="CLOSE" onclick="setcolumn('CLOSE')" >CLOSE</button>
+            <button type="button"  class="column_name" id="VOLUME" onclick="setcolumn('VOLUME')" >VOLUME</button>
+            <button type="button"  class="column_name" id="VALUE" onclick="setcolumn('VALUE')" >VALUE</button>
+            <button type="button"  class="column_name" id="NO_OF_TRADES" onclick="setcolumn('NO_OF_TRADES')" >NO OF TRADES</button>
+            
+
+            <button type="button" class="time_scale" id="one_week" onclick="setTime(7)" >1W</button>
+            <button type="button" class="time_scale" id="one_month" onclick="setTime(31)" >1M</button>
+            <button type="button" class="time_scale" id="three_month" onclick="setTime(93)" >3M</button>
+            <button type="button" class="time_scale" id="six_month" onclick="setTime(186)" >6M</button>
+            <button type="button" class="time_scale" id="one_year" onclick="setTime(365)" >1Y</button>
+            <button type="button" class="time_scale" id="five_year" onclick="setTime(1825)" >5Y</button>
+            <button type="button" class="time_scale" id="max" onclick="setTime(3650)" >MAX</button>
+
+       
+          
+          
+          <canvas id="myChart" style="width:220%; max-width:1400px"></canvas>
+          <div class="NAV-BAR">
+
+            <img class="profile_image" src="{{ url_for('static', filename='img/profile.png') }}"  />
+              <div class="dropdown">
+  
+                <button id="profile_button">
+                </button>
+                <div class="dropdown-content">
+                <a href="/profile">View Profile</a>
+                <a href="/logout">Logout</a>
+                </div>
+              </div>
+              
+  
+              
+              <a href="/home">
+              <img class="logo_image" src="{{ url_for('static', filename='img/logo.png') }}" />
+              </a>
+              
+              <a href="/stocks">
+              <img class="vector-2" src="{{ url_for('static', filename='img/stock.png') }}" />
+              </a>
+  
+              <a href="/compare">
+              <img class="vector-3" src="{{ url_for('static', filename='img/compare.png') }}" />
+              </a>
+  
+          </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

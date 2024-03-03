@@ -1,0 +1,182 @@
+body {
+    overflow-x: hidden;
+    background-color: #191919;
+}
+
+.div {
+    overflow: hidden;
+    background-color: #191919;
+    width: 1440px;
+    height: 1000px;
+    left :0px;
+    position: absolute;
+  }
+.text-wrapper {
+    position: absolute;
+    top: 100px;
+    left: 90px;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #d4d4d4;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+.info{
+    position: absolute;
+    width: 1200px;
+    height: 500px;
+    top: 140px;
+    left: 90px;
+    background-color: #ca984929;
+    border-radius: 12px;
+    border: 2px solid;
+    border-color: #ffffff05;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #d4d4d4;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+
+  }
+#data{
+  position:relative;
+  left:25px;
+  top:25px;
+  font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #d4d4d4;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+
+
+}
+#profit_total{
+  position:relative;
+  left:800px;
+  top:25px;
+  font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #d4d4d4;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+.vector {
+    
+    position: absolute;
+    width: 996px;
+    height: 770px;
+    top: 338px;
+    left: 484px;
+  }
+
+.NAV-BAR {
+    width: 100%;
+    height: 100px;
+    top: 0px;
+    position: fixed;
+ 
+    width: 1442px;
+    height: 52px;
+    top: -2px;
+    left: -2px;
+    background-color: #1f1f1f;
+    border: 2px solid;
+    border-color: #ffffff05;
+}
+  
+.logo_image {
+    position: absolute;
+    width: 40px;
+    height: 34px;
+    top: 10px;
+    left: 90px;
+}
+  
+.profile_image {
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    top: 12px;
+    left: 1323px;
+}
+  
+.vector-2 {
+    position: absolute;
+    width: 26px;
+    height: 24px;
+    top: 12px;
+    left: 1262px;
+}
+  
+.vector-3 {
+    position: absolute;
+    width: 25px;
+    height: 22px;
+    top: 12px;
+    left: 1200px;
+  }
+
+
+  #profile_button{
+    background: transparent;
+    border: none;
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    top: 12px;
+    left: 1323px;
+}
+
+.dropdown {
+  display: inline-block;
+  position: absolute;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  
+  
+  top: 40px;
+  left: 1243px;
+  width: 107px;
+  
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  
+  display: block;
+  color: #1f1f1f;
+  background-color: #CA9849;
+  padding: 5px;
+  text-decoration: none;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+.dropdown-content a:hover {
+  color: #CA9849;
+  background-color: #1F1F1F;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}

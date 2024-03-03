@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PROFILE</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='profile_screen.css') }}">
+  </head>
+  <body>
+    <div class="element">
+      <div class="div">
+        <div class="text-wrapper">
+            Basic Details
+        </div>
+        <div class="info">
+          
+          <p id="data">
+            Hello , {{str}} ! 
+            <br>
+            <br>
+            Below is your History of transaction
+            
+
+            {{history|safe}}
+
+            
+            
+          </p>
+          <p id="profit_total">
+            
+          </p>
+
+        </div>
+        <img class="vector" src="{{ url_for('static', filename='img/watermarklogo.png') }}" />
+        <div class="NAV-BAR">
+
+          <img class="profile_image" src="{{ url_for('static', filename='img/profile.png') }}"  />
+            <div class="dropdown">
+
+              <button id="profile_button">
+              </button>
+              <div class="dropdown-content">
+              <a href="/profile">View Profile</a>
+              <a href="/logout">Logout</a>
+              </div>
+            </div>
+            
+
+            <a href="/home">
+            <img class="logo_image" src="{{ url_for('static', filename='img/logo.png') }}" />
+            </a>
+            
+            <a href="/stocks">
+            <img class="vector-2" src="{{ url_for('static', filename='img/stock.png') }}" />
+            </a>
+
+            <a href="/compare">
+            <img class="vector-3" src="{{ url_for('static', filename='img/compare.png') }}" />
+            </a>
+
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
