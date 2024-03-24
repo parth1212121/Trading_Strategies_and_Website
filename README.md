@@ -6,5 +6,10 @@ The Repository is aimed at coordinating all the activities of UCL Summer Interns
 **All the collaborators are request to form their own branch and start contributing**
 
 
-**For Now    ./Trading_Strategies/ML_Techniques needs development**
+
+**FUTURE_PLANS:**
+
+**We plan to incorporate the trading startegies into our website, and further investigate some more complex startegies,
+and derive inytersting observations out of them**
+
 
