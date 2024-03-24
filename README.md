@@ -10,6 +10,6 @@ The Repository is aimed at coordinating all the activities of UCL Summer Interns
 **FUTURE_PLANS:**
 
 **We plan to incorporate the trading startegies into our website, and further investigate some more complex startegies,
-and derive inytersting observations out of them**
+and derive intersting observations out of them**
 
 
