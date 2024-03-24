@@ -97,19 +97,24 @@ static void writeCSV(const string& filename, const vector<vector <string> >& dat
                 else{
                     r++;
                 }
-                vector<string> temp;
-                temp.push_back(data[i][0]);
-                if(r>0){
-                    temp.push_back("BUY");
+                if(r!=0){
+                    vector<string> temp;
+                    temp.push_back(data[i][0]);
+                    if(r>0){
+                        temp.push_back("BUY");
+                        temp.push_back(to_string(1));
+                    }
+                    else{
+                        temp.push_back("SELL");
+                        temp.push_back(to_string(1));
+                    }
+                    
+                    for(int j=3;j<data[i].size();j++){
+                        temp.push_back(data[i][j]);
+                    }
+                    final_data.push_back(temp);
                 }
-                else{
-                    temp.push_back("SELL");
-                }
-                temp.push_back(to_string(r));
-                for(int j=3;j<data[i].size();j++){
-                    temp.push_back(data[i][j]);
-                }
-                final_data.push_back(temp);
+                
             }
             
         }

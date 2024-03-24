@@ -15,12 +15,30 @@ string one_year_backQ(string date){
     for(int i=date.size()-4;i<date.size();i++){
         year.push_back(date[i]);
     }
+    string month="";
+    for(int i=date.size()-7;i<date.size()-5;i++){
+        month.push_back(date[i]);
+    }
+    string day="";
+    for(int i=0;i<2;i++){
+        day.push_back(date[i]);
+    }
+
 
     int x= stoi(year);
-    x--;
-    string res=to_string(x);
-
     string ans="";
+    if(x%4==0 && stoi(month)==2 && stoi(day)==29){
+        x--;
+        string res=to_string(x);
+        ans="01/03/"+res;
+ 
+        return ans;
+    }
+    x--;
+    
+    string res=to_string(x);
+    
+    
     for(int i=0;i<date.size()-4;i++){
         ans.push_back(date[i]);
     }
@@ -334,7 +352,7 @@ StrategyResult* DMAPPQ(string symbol, int n, int x ,double p , int max_hold_days
             AMA=AMA+(SF[j]*(stod(table["CLOSE"][j])-AMA));
         
         }
-        
+        int BUY=0;
         
         
 
@@ -351,11 +369,13 @@ StrategyResult* DMAPPQ(string symbol, int n, int x ,double p , int max_hold_days
                 today_statistics.push_back(Date);
                 
                 if(holding<0){
+                    BUY=1;
                     cash-=stod(table["CLOSE"][j]);
                     today_statistics.push_back("BUY");
                     holding++;
                 }
                 else{
+                    BUY=-1;
                     cash+=stod(table["CLOSE"][j]);
                     today_statistics.push_back("SELL");
                     holding--;
@@ -381,9 +401,9 @@ StrategyResult* DMAPPQ(string symbol, int n, int x ,double p , int max_hold_days
         }
         
         
-        if((stod(table["CLOSE"][j])-AMA)>((p/100.0)*AMA) && holding<x){
+        if((stod(table["CLOSE"][j])-AMA)>((p/100.0)*AMA) && holding<x && BUY!=1){
             
-            if(holding<0){
+            if(holding<0 ){
                 holding++;
                 cash-=stod(table["CLOSE"][j]);
                 vector<string> today_cash_flow;
@@ -439,7 +459,8 @@ StrategyResult* DMAPPQ(string symbol, int n, int x ,double p , int max_hold_days
         }
 
         
-        else if((-stod(table["CLOSE"][j])+AMA)>((p/100.0)*AMA)  && holding>-x){
+        else if((-stod(table["CLOSE"][j])+AMA)>((p/100.0)*AMA)  && holding>-x && BUY!=-1){
+            
             if(holding>0){
                 holding--;
                 cash+=stod(table["CLOSE"][j]);
@@ -491,13 +512,13 @@ StrategyResult* DMAPPQ(string symbol, int n, int x ,double p , int max_hold_days
                 day_buyed.push_back(0);
             }
         }
-        else{
+        else if(BUY==0){
                 vector<string> today_cash_flow;
                 string Date=convertDateFormat(table["DATE"][j]);
                 today_cash_flow.push_back(Date);
                 today_cash_flow.push_back(to_string(cash));
                 cash_flow.push_back(today_cash_flow);
-            }
+        }
         vector<int > temp;
         for(int i=0;i<day_buyed.size();i++){
             temp.push_back(day_buyed[i]);
@@ -507,8 +528,7 @@ StrategyResult* DMAPPQ(string symbol, int n, int x ,double p , int max_hold_days
             day_buyed.push_back(temp[i]+1);
         }
         
-        //cout<<table["DATE"][j]<<" ----- "<<AMA<<" "<<holding<<endl;
-
+        //cout<<table["CLOSE"][j]<<"\t"<<AMA*(1.0+p/100.0)<<"\t"<<AMA*(1.0-p/100.0)<<"\t"<<SF[j]<<"\t"<<ER[j]<<"\t"<<holding<<endl;
         
 
     }
@@ -1166,7 +1186,7 @@ StrategyResult* Final_PnLQ(string symbol,int x,int p,bool write){          // wi
 
     vector<string>d2;
     d2.push_back("Date");
-    d2.push_back("Order_Statics");
+    d2.push_back("Order_dir");
     d2.push_back("Quantity");
     d2.push_back("Price");
     order_stats_vector.push_back(d2);

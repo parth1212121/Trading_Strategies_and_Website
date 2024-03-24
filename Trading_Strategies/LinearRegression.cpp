@@ -283,7 +283,7 @@ void Final_PnL(string symbol,int x,int p,bool write){          // will allow req
 
     vector<string>d2;
     d2.push_back("Date");
-    d2.push_back("Order_Statics");
+    d2.push_back("Order_dir");
     d2.push_back("Quantity");
     d2.push_back("Price");
     order_stats_vector.push_back(d2);

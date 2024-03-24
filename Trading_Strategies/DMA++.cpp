@@ -15,7 +15,13 @@ void DMAPP(string symbol, int n, int x ,double p , int max_hold_days , double c1
     table=parse_data(symbol);
     double cash=0;
     vector<int> day_buyed;
-
+    /* for(int i=0;i<table["DATE"].size();i++){
+        cout<<"\""<<convertDateFormat(table["DATE"][i])<<"\""<<",";
+    }
+    cout<<endl;
+    for(int i=0;i<table["CLOSE"].size();i++){
+        cout<<table["CLOSE"][i]<<",";
+    } */
     vector<vector<string> > cash_flow;
     vector<vector<string> > order_statictics;
     cash_flow.push_back({"Date","Cashflow"});
@@ -77,7 +83,7 @@ void DMAPP(string symbol, int n, int x ,double p , int max_hold_days , double c1
             AMA=AMA+(SF[j]*(stod(table["CLOSE"][j])-AMA));
         
         }
-        
+        int BUY=0;
         
         
 
@@ -94,11 +100,13 @@ void DMAPP(string symbol, int n, int x ,double p , int max_hold_days , double c1
                 today_statistics.push_back(Date);
                 
                 if(holding<0){
+                    BUY=1;
                     cash-=stod(table["CLOSE"][j]);
                     today_statistics.push_back("BUY");
                     holding++;
                 }
                 else{
+                    BUY=-1;
                     cash+=stod(table["CLOSE"][j]);
                     today_statistics.push_back("SELL");
                     holding--;
@@ -124,9 +132,9 @@ void DMAPP(string symbol, int n, int x ,double p , int max_hold_days , double c1
         }
         
         
-        if((stod(table["CLOSE"][j])-AMA)>((p/100.0)*AMA) && holding<x){
+        if((stod(table["CLOSE"][j])-AMA)>((p/100.0)*AMA) && holding<x && BUY!=1){
             
-            if(holding<0){
+            if(holding<0 ){
                 holding++;
                 cash-=stod(table["CLOSE"][j]);
                 vector<string> today_cash_flow;
@@ -182,7 +190,8 @@ void DMAPP(string symbol, int n, int x ,double p , int max_hold_days , double c1
         }
 
         
-        else if((-stod(table["CLOSE"][j])+AMA)>((p/100.0)*AMA)  && holding>-x){
+        else if((-stod(table["CLOSE"][j])+AMA)>((p/100.0)*AMA)  && holding>-x && BUY!=-1){
+            
             if(holding>0){
                 holding--;
                 cash+=stod(table["CLOSE"][j]);
@@ -234,13 +243,13 @@ void DMAPP(string symbol, int n, int x ,double p , int max_hold_days , double c1
                 day_buyed.push_back(0);
             }
         }
-        else{
+        else if(BUY==0){
                 vector<string> today_cash_flow;
                 string Date=convertDateFormat(table["DATE"][j]);
                 today_cash_flow.push_back(Date);
                 today_cash_flow.push_back(to_string(cash));
                 cash_flow.push_back(today_cash_flow);
-            }
+        }
         vector<int > temp;
         for(int i=0;i<day_buyed.size();i++){
             temp.push_back(day_buyed[i]);
@@ -250,8 +259,7 @@ void DMAPP(string symbol, int n, int x ,double p , int max_hold_days , double c1
             day_buyed.push_back(temp[i]+1);
         }
         
-        //cout<<table["DATE"][j]<<" ----- "<<AMA<<" "<<holding<<endl;
-
+        //cout<<table["CLOSE"][j]<<"\t"<<AMA*(1.0+p/100.0)<<"\t"<<AMA*(1.0-p/100.0)<<"\t"<<SF[j]<<"\t"<<ER[j]<<"\t"<<holding<<endl;
         
 
     }

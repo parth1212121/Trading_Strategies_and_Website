@@ -16,75 +16,79 @@ Before running the program, ensure you have the following installed:
 1. Clone the repository:
 
     ```bash
-     git clone https://github.com/your_username/UCL_Project.git
+     git clone https://github.com/your_username/trading-strategies.git
 
 2. Navigate to the project directory:
     ```bash
-     cd UCL_Project
+     cd trading-strategies
 
-3. Navigate to the project sub_directory:
+3. Compile the source code::
     ```bash
-     cd Trading_Strategies
+     g++ -o trading_strategy main.cpp -lpthread
 
+
+2. Navigate to the project directory:
+    ```bash
+     g++ -o trading_strategy main.cpp -lpthread
+
+4. Compile the source code
+    ```bash
+     g++ -o trading_strategy main.cpp -lpthread
 
 ### Running The Program
 
 To execute a specific trading strategy, run the compiled program with appropriate command-line arguments:
 
-**Sample Command --> "make strategy=BASIC symbol=SBIN n=2 x=2 start_date=01/01/2022 end_date=01/01/2023"**
+  ```bash
+     ./trading_strategy <strategy> <symbol> [additional parameters]
+   ```
+
 
 ### ADX
   ```bash
-   make strategy=ADX symbol=<symbol> x=<x> n=<n> adx_threshold=<adx_threshold> start_date=<start_date> end_date=<end_date>
+      ./trading_strategy ADX <symbol> <n> <x> <adx_threshold> <start_date> <end_date>
   ```
 
 ### BASIC
   ```bash
-   make strategy=BASIC symbol=<symbol> n=<n> x=<x> start_date=<start_date> end_date=<end_date>
+./trading_strategy BASIC <symbol> <n> <x> <start_date> <end_date>
   ```
 
 ### DMA
   ```bash
-   make strategy=DMA symbol=<symbol> n=<n> x=<x> p=<p> start_date=<start_date> end_date=<end_date>
+  ./trading_strategy DMA <symbol> <n> <x> <p> <start_date> <end_date>
   ```
 
 ### DMA++
   ```bash
-   make strategy="DMA++" symbol=<symbol> x=<x> p=<p> n=<n> max_hold_days=<max_hold_days> c1=<c1> c2=<c2>
- start_date=<start_date> end_date=<end_date>
+  ./trading_strategy DMA++ <symbol> <n> <x> <p> <max_hold_days> <c1> <c2> <start_date> <end_date>
   ```
 
 ### LinearRegression
   ```bash
-   make strategy="LINEAR_REGRESSION" symbol=<symbol> x=<x> p=<p> train_start_date=<train_start_date>
- train_end_date=<train_end_date> start_date=<start_date> end_date=<end_date>
+  ./trading_strategy LinearRegression <symbol> <x> <p> <train_start_date> <train_end_date> <start_date> <end_date>
   ```
-
 ### MACD
   ```bash
-  make strategy=MACD symbol=<symbol> x=<x> start_date=<start_date> end_date=<end_date>
+  ./trading_strategy MACD <symbol> <x> <start_date> <end_date>
   ```
 
 ### RSI
   ```bash
-    make strategy=RSI symbol=<symbol> x=<x> n=<n> oversold_threshold=<oversold_threshold> overbought_threshold=<overbought_threshold>
- start_date=<start_date> end_date=<end_date>
-  ```
-
-### BEST OF ALL
-  ```bash
-    make strategy="BEST_OF_ALL" symbol=<symbol> start_date=<start_date> end_date=<end_date>
+  ./trading_strategy RSI <symbol> <n> <x> <oversold_threshold> <overbought_threshold> <start_date> <end_date>
   ```
 
 ### PAIRS
   ```bash
-   make strategy=PAIRS symbol1=<symbol1> symbol2=<symbol2> x=<x> n=<n> threshold=<threshold>
- start_date=<start_date> end_date=<end_date>
+  ./trading_strategy PAIRS <symbol1> <symbol2> <n> <x> <start_date> <end_date> <threshold> <stop_loss_threshold>
   ```
 
-**Each strategy generates CSV files containing daily cash flow, order statistics, and a final P&L report.**
 
-**Below is the discription of all trading startegeies , It contains details about its implementation, insights and results.**
+
+**Each strategy generates CSV files containing daily cash flow, order statistics, and a final P&L report.
+Below is the discription of all trading startegeies , It contains details about its implementation, insights and results.**
+
+
 
 # Trading Strategy: BASIC
 
@@ -117,7 +121,7 @@ The performance of the BASIC trading strategy can be evaluated by analyzing the 
 #### Visual Analysis
 Graphical representations of daily cash flow and order statistics offer valuable insights into the execution and profitability of the BASIC trading strategy. These visualizations can help identify trends, patterns, and potential areas for optimization in the trading strategy.
 
-![Basic](./pictures/BASIC.png)
+![Basic](BASIC.png)
 
 
 # Trading Strategy: ADX
@@ -154,7 +158,7 @@ The ADX (Average Directional Index) trading strategy is an algorithmic approach 
 - **Visual Analysis**: Graphical representations of daily cash flow and order statistics can provide visual insights into the strategy's execution and profitability.
 
 
-![ADX](./pictures/ADX.png)
+![ADX](ADX.png)
 
 
 # Trading Strategy: DMA
@@ -190,7 +194,7 @@ The DMA (Daily Moving Average) trading strategy is an algorithmic approach imple
 - **Visual Analysis**: Graphical representations of daily cash flow and order statistics can provide visual insights into the strategy's execution and profitability.
 
 
-![ADX](./pictures/DMA.png)
+![ADX](DMA.png)
 
 
 # Trading Strategy: DMA++
@@ -232,7 +236,7 @@ The DMA++ (Dynamic Moving Average Plus Plus) trading strategy is an advanced alg
 - **Risk Management**: Effective risk management techniques, such as position sizing and stop-loss orders, are essential for managing downside risk and enhancing overall strategy performance.
 
 
-![ADX](./pictures/DMA++.png)
+![ADX](DMA++.png)
 
 
 
@@ -269,7 +273,7 @@ The MACD (Moving Average Convergence Divergence) trading strategy is an algorith
 - **Visual Analysis**: Graphical representations of daily cash flow and order statistics can provide visual insights into the strategy's execution and profitability.
 
 
-![ADX](./pictures/MACD.png)
+![ADX](MACD.png)
 
 
 
@@ -307,7 +311,7 @@ The RSI (Relative Strength Index) trading strategy is a momentum oscillator that
 - **Risk Management**: Implementing risk management techniques, such as position sizing and stop-loss orders, is crucial for managing downside risk and maximizing profitability.
 
 
-![ADX](./pictures/RSI.png)
+![ADX](RSI.png)
 
 
 
@@ -350,7 +354,7 @@ The Linear Regression trading strategy employs machine learning techniques to pr
 
 
 
-![ADX](./pictures/LR.png)
+![ADX](LR.png)
 
 # Multithreading  "Best of All" Strategy Evaluation
 
@@ -381,7 +385,7 @@ This implementation evaluates the performance of multiple trading strategies con
 - **Error Handling**: Robust error handling mechanisms are necessary to ensure proper synchronization and avoid race conditions during multithreaded execution.
 
 
-![ADX](./pictures/BEST_OF_ALL.png)
+![ADX](BEST_OF_ALL.png)
 
 
 #  Pairs Trading
@@ -409,6 +413,7 @@ This implementation evaluates the Pairs Trading strategy . Pairs Trading involve
    - If the z-score falls below the negative of the threshold and the maximum position limit allows, a short position is taken in the first symbol and a long position in the second symbol.
 3. **Stop Loss Management**:
    - If a stop-loss threshold is provided, the strategy monitors the z-score daily and exits positions if the z-score exceeds the stop-loss threshold, potentially limiting losses.
+   - Also on a day if my z-score of my positions that i am holding is not greater than my stop-loss threshold and i need to buy stock 1 , then i buy stock1 of that stock pair that has the highest z->score today, else if i need to sell stock 1 today i sell stock1 of that stock pair with highest z-score. This is so that chances that in fututre i  have to forcefully exisy my position is reduced
 4. **Multithreading**:
    - The `PAIRS` function can operate in two modes: with or without a stop-loss threshold. Both modes utilize multithreading to enhance performance.
    - Multiple instances of the Pairs Trading strategy can be evaluated concurrently for different pairs of assets.
@@ -422,6 +427,5 @@ This implementation evaluates the Pairs Trading strategy . Pairs Trading involve
 - **Performance Evaluation**: Daily cash flow and order statistics provide insights into the strategy's performance over the evaluation period.
 - **Scalability**: Multithreading enables the concurrent evaluation of multiple pairs of assets, enhancing scalability and computational efficiency.
 - **Parameter Sensitivity**: The strategy's performance may vary based on the choice of parameters such as the moving average window size and threshold values. Sensitivity analysis can help optimize parameter selection.
-
 
 
