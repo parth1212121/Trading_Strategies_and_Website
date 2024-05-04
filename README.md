@@ -1,7 +1,7 @@
 # UCL_Project
 
 
-The Repository is aimed at coordinating all the activities of UCL TRading Project under Professor Philips Trevelean. 
+The Repository is aimed at coordinating all the activities of UCL Trading Project under Professor Philips Trevelean. 
 
 **All the collaborators are request to form their own branch and start contributing**
 
